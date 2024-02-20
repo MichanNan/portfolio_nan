@@ -2,15 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { SlArrowDown } from "react-icons/sl";
 
 const Introduce = () => {
   return (
-    <section className="max-w-[60rem] text-center mt-[8rem]" id="home">
+    <section className="max-w-[60rem] text-center mt-[8rem] " id="home">
       <div className="flex flex-col gap-10 items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -74,6 +75,13 @@ const Introduce = () => {
           >
             <FaGithubSquare />
           </Link>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.125 }}
+        >
+          <SlArrowDown className="text-gray-300 text-4xl my-24  hidden sm:block dark:bg-opacity-20" />
         </motion.div>
       </div>
     </section>
