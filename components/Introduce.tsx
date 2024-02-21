@@ -11,7 +11,10 @@ import { SlArrowDown } from "react-icons/sl";
 
 const Introduce = () => {
   return (
-    <section className="max-w-[60rem] text-center mt-[8rem] " id="home">
+    <section
+      className="max-w-[60rem] text-center mt-[8rem] scroll-mt-28"
+      id="home"
+    >
       <div className="flex flex-col gap-10 items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -77,6 +80,7 @@ const Introduce = () => {
           </Link>
         </motion.div>
         <motion.div
+          className="animate-bounce-slow"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.125 }}

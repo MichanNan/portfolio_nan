@@ -5,6 +5,8 @@ import { IoSearch } from "react-icons/io5";
 import { IoHomeOutline } from "react-icons/io5";
 
 import knittogether from "@/public/knittogether.png";
+import onlineShopAdmin from "@/public/online-admin.png";
+import onlineShopClient from "@/public/online-front.png";
 import foodOrder from "@/public/food-order.png";
 
 export const links = [
@@ -73,15 +75,37 @@ export const projectsData = [
     title: "Knittogether",
     description:
       "Knittogether is an app for recording and sharing knitting projects. Knittiers can create their own accounts to record their knitting projects, yarn and needle inventory. They can search for patterns through Ravelry API. Even more exciting is that knitters can share their projects to the community and also explore projects shared by other knitters.",
-    tags: ["React", "Next.js", "MongoDB", "TaiStyled Components", "Node.js"],
+    tags: ["React", "Next.js", "MongoDB", "styled Components", "Node.js"],
     imageUrl: knittogether,
+    github: "https://github.com/MichanNan/Knittogether",
+    demo: "https://knittogether.vercel.app/",
   },
   {
-    title: "Food-order",
+    title: "Online Shop Admin",
+    description:
+      "Created an online shop admin dashboard that enables the management of your online store. With this intuitive interface, you can efficiently organize and update your inventory with ease.",
+    tags: ["React", "Next.js", "prisma", "tailwind", "MongoDB", "Node.js"],
+    imageUrl: onlineShopAdmin,
+    github: "https://github.com/MichanNan/shop-admin",
+    demo: "https://shop-admin-phi.vercel.app/",
+  },
+  {
+    title: "Online Shop Client",
+    description:
+      "This is an online shop website that provide a mount of knitting projects from myself. You can register and login to explore all the products, add to shopping cart and use stripe to place your order. At user account you can also check all your orders.",
+    tags: ["React", "Next.js", "prisma", "tailwind", "MongoDB", "Node.js"],
+    imageUrl: onlineShopClient,
+    github: "https://github.com/MichanNan/shop-front",
+    demo: "https://shop-front-sor7.vercel.app/",
+  },
+  {
+    title: "Food Order System",
     description:
       "Developed and implemented an online ordering system with React and Firebase for small businesses. Used various React Hooks such as useState, useEffect, useRef, useContext, and useReducer. Connected to Firebase to store data.",
     tags: ["React", "Reacthooks", "firebase"],
     imageUrl: foodOrder,
+    github: "https://github.com/MichanNan/food-order-app",
+    demo: "https://food-order-app-michannan.vercel.app/",
   },
 ] as const;
 
