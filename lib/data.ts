@@ -84,7 +84,15 @@ export const projectsData = [
     title: "Online Shop Admin",
     description:
       "Created an online shop admin dashboard that enables the management of your online store. With this intuitive interface, you can efficiently organize and update your inventory with ease.",
-    tags: ["React", "Next.js", "prisma", "tailwind", "MongoDB", "Node.js"],
+    tags: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "prisma",
+      "tailwind",
+      "MongoDB",
+      "Node.js",
+    ],
     imageUrl: onlineShopAdmin,
     github: "https://github.com/MichanNan/shop-admin",
     demo: "https://shop-admin-phi.vercel.app/",
@@ -93,7 +101,15 @@ export const projectsData = [
     title: "Online Shop Client",
     description:
       "This is an online shop website that provide a mount of knitting projects from myself. You can register and login to explore all the products, add to shopping cart and use stripe to place your order. At user account you can also check all your orders.",
-    tags: ["React", "Next.js", "prisma", "tailwind", "MongoDB", "Node.js"],
+    tags: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "prisma",
+      "tailwind",
+      "MongoDB",
+      "Node.js",
+    ],
     imageUrl: onlineShopClient,
     github: "https://github.com/MichanNan/shop-front",
     demo: "https://shop-front-sor7.vercel.app/",
