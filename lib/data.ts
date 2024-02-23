@@ -38,19 +38,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Manager Assistant",
+    title: "Orientation and Application Phase for Starting a Career.",
     location: "Hamburg Germany",
-    description: "Creating an online shop through Alibaba.",
-    icon: React.createElement(MdOutlineShoppingCart),
-    date: "10.2014 - 09.2019",
-  },
-  {
-    title: "Stay at Home Mom",
-    location: "Hamburg, Germany",
     description:
-      "Learned JavaScript basics through online courses on Udemy and FreeCodeCamp during parental leave.",
-    icon: React.createElement(IoHomeOutline),
-    date: "10.2014 - 09.2019",
+      "During this period, I have been consistently learning on Udemy, learning new tech stack such as TypeScript, Express, Tailwind, and more.",
+    icon: React.createElement(IoSearch),
+    date: "08.2023 - present",
   },
   {
     title: "Trainee Web Development",
@@ -61,12 +54,19 @@ export const experiencesData = [
     date: "04.2023 - 07.2023",
   },
   {
-    title: "Orientation and Application Phase for Starting a Career.",
-    location: "Hamburg Germany",
+    title: "Stay at Home Mom",
+    location: "Hamburg, Germany",
     description:
-      "During this period, I have been consistently learning on Udemy, learning new tech stack such as TypeScript, Express, Tailwind, and more.",
-    icon: React.createElement(IoSearch),
-    date: "08.2023 - present",
+      "Learned JavaScript basics through online courses on Udemy and FreeCodeCamp during parental leave.",
+    icon: React.createElement(IoHomeOutline),
+    date: "10.2014 - 09.2019",
+  },
+  {
+    title: "Manager Assistant",
+    location: "Hamburg Germany",
+    description: "Creating an online shop through Alibaba.",
+    icon: React.createElement(MdOutlineShoppingCart),
+    date: "10.2014 - 09.2019",
   },
 ] as const;
 

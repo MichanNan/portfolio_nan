@@ -2,10 +2,13 @@
 
 import { links } from "@/lib/data";
 import Link from "next/link";
-import React from "react";
+import React, { useContext, useRef } from "react";
 import { motion } from "framer-motion";
+import { ActiveSectionContext } from "@/context/active-nav-link-context";
 
 const Header = () => {
+  const activeSectionCtx = useContext(ActiveSectionContext);
+
   return (
     <header className="relative z-[100]">
       <motion.div
@@ -23,11 +26,28 @@ const Header = () => {
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300"
+                className={`flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300 ${
+                  activeSectionCtx?.activeSection === link.name
+                    ? "text-gray-950"
+                    : ""
+                }`}
                 href={link.hash}
-                onClick={() => {}}
+                onClick={() => {
+                  activeSectionCtx?.setActiveSection(link.name);
+                }}
               >
                 {link.name}
+                {link.name === activeSectionCtx?.activeSection && (
+                  <motion.span
+                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30,
+                    }}
+                  ></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}

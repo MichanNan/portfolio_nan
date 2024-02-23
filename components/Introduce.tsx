@@ -1,17 +1,22 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { SlArrowDown } from "react-icons/sl";
+import { useSectionInView } from "@/hooks/useSectionInView";
+import { ActiveSectionContext } from "@/context/active-nav-link-context";
 
 const Introduce = () => {
+  const { ref } = useSectionInView("Home", 0.5);
+  const activeSectionCtx = useContext(ActiveSectionContext);
   return (
     <section
+      ref={ref}
       className="max-w-[60rem] text-center mt-[8rem] scroll-mt-28"
       id="home"
     >
@@ -51,6 +56,9 @@ const Introduce = () => {
           className="flex flex-col gap-4 sm:flex-row justify-center items-center px-4 text-lg font-medium"
         >
           <Link
+            onClick={() => {
+              activeSectionCtx?.setActiveSection("Contact");
+            }}
             className="group bg-gray-800 text-white px-6 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
             href="#contact"
           >
@@ -80,7 +88,7 @@ const Introduce = () => {
           </Link>
         </motion.div>
         <motion.div
-          className="animate-bounce-slow"
+          className="animate-bounce"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.125 }}

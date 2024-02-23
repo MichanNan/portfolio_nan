@@ -4,6 +4,7 @@ import "./globals.css";
 import Container from "@/components/Container";
 import Header from "@/components/Header";
 import Background from "@/components/Background";
+import { ActiveSectionProvider } from "@/context/active-nav-link-context";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -23,10 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lato.className}>
-        <Container>
-          <Header /> {children}
-          <Background />
-        </Container>
+        <ActiveSectionProvider>
+          <Container>
+            <Header /> {children}
+            <Background />
+          </Container>
+        </ActiveSectionProvider>
       </body>
     </html>
   );
