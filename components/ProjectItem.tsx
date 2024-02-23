@@ -28,24 +28,33 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="flex  bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-full hover:bg-gray-200 transition sm:group-even:pl-8 rounded-lg">
-        <div className="flex flex-col h-full py-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl">{project.title}</h3>
-          <div className="flex items-center gap-4 mt-4">
-            <div className="flex items-center gap-2 bg-gray-500 opacity-80 rounded-xl text-white text-sm px-2 py-1 transition focus:scale-110 hover:opacity-100 hover:scale-110">
-              <Link href={project.github}>Code</Link>
+      <section className="flex bg-gray-100  border border-black/5 overflow-hidden hover:bg-gray-200 transition rounded-lg">
+        <div className="relative flex flex-col justify-start items-center gap-4 w-[300px] h-[620px] pb-4">
+          <Image
+            src={project.imageUrl}
+            alt={project.title}
+            width={300}
+            height={225}
+            className="  rounded-t-lg shadow-sm transition"
+          />
 
-              <BsArrowRight />
+          <h3 className="text-2xl">{project.title}</h3>
+          <div className="flex justify-center items-center gap-4 mt-2">
+            <div className="flex items-center gap-2 bg-white border-[1px] border-gray-300  rounded-md px-4 py-2 text-gray-500 text-sm transition  focus:text-white focus:bg-gray-500  hover:text-white hover:bg-gray-500">
+              <Link href={project.github} target="_blank">
+                GitHub
+              </Link>
             </div>
-            <div className="flex items-center gap-2 bg-gray-500 opacity-80 rounded-xl text-white text-sm px-2 py-1 transition focus:scale-110 hover:opacity-100 hover:scale-110">
-              <Link href={project.demo}>Demo</Link>
-              <BsArrowRight />
+            <div className="flex items-center gap-2 bg-gray-300 border-[1px] border-gray-300 rounded-md px-4 py-2 text-black text-sm  transition  focus:text-gray-500 focus:bg-white  hover:text-gray-500 hover:bg-white ">
+              <Link href={project.demo} target="_blank">
+                Live Link
+              </Link>
             </div>
           </div>
-          <p className="text-left mt-2 text-md leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="text-left mt-2 px-2 text-md leading-relaxed text-gray-700 dark:text-white/70">
             {project.description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto sm:pt-5">
+          <ul className="flex flex-wrap justify-center mt-2 gap-2">
             {project.tags.map((tag) => (
               <li
                 key={tag}
@@ -56,12 +65,6 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
             ))}
           </ul>
         </div>
-        <Image
-          src={project.imageUrl}
-          alt={project.title}
-          quality={95}
-          className=" absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl  group-hover:scale-[1.04] transition group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-even:-right-[initial] group-even:-left-40 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2"
-        />
       </section>
     </motion.div>
   );

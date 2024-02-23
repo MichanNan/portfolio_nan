@@ -74,7 +74,7 @@ export const projectsData = [
   {
     title: "Knittogether",
     description:
-      "Knittogether is an app for recording and sharing knitting projects. Knittiers can create their own accounts to record their knitting projects, yarn and needle inventory. They can search for patterns through Ravelry API. Even more exciting is that knitters can share their projects to the community and also explore projects shared by other knitters.",
+      "Knittogether is an app for recording and sharing knitting projects. Knittiers can create their own accounts to record their knitting projects, yarn and needle inventory.",
     tags: ["React", "Next.js", "MongoDB", "styled Components", "Node.js"],
     imageUrl: knittogether,
     github: "https://github.com/MichanNan/Knittogether",
@@ -83,7 +83,7 @@ export const projectsData = [
   {
     title: "Online Shop Admin",
     description:
-      "Created an online shop admin dashboard that enables the management of your online store. With this intuitive interface, you can efficiently organize and update your inventory with ease.",
+      "Created an online shop admin dashboard that enables the management of your online store. With this intuitive interface, users can organize and update your inventory with ease.",
     tags: [
       "React",
       "Next.js",
@@ -100,7 +100,7 @@ export const projectsData = [
   {
     title: "Online Shop Client",
     description:
-      "This is an online shop website that provide a mount of knitting projects from myself. You can register and login to explore all the products, add to shopping cart and use stripe to place your order. At user account you can also check all your orders.",
+      "This is an online shop website for knitting projects. Users can create an account to explore all the products, add to shopping cart and use stripe to place your order.",
     tags: [
       "React",
       "Next.js",
@@ -117,7 +117,7 @@ export const projectsData = [
   {
     title: "Food Order System",
     description:
-      "Developed and implemented an online ordering system with React and Firebase for small businesses. Used various React Hooks such as useState, useEffect, useRef, useContext, and useReducer. Connected to Firebase to store data.",
+      "Developed and implemented an online ordering system with React and Firebase for small businesses. This is an Udemy course application.",
     tags: ["React", "Reacthooks", "firebase"],
     imageUrl: foodOrder,
     github: "https://github.com/MichanNan/food-order-app",
