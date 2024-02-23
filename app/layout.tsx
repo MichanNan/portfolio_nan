@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import Header from "@/components/Header";
 import Background from "@/components/Background";
 import { ActiveSectionProvider } from "@/context/active-nav-link-context";
+import { Toaster } from "react-hot-toast";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -26,7 +27,9 @@ export default function RootLayout({
       <body className={lato.className}>
         <ActiveSectionProvider>
           <Container>
-            <Header /> {children}
+            <Header />
+            {children}
+            <Toaster position="bottom-center" />
             <Background />
           </Container>
         </ActiveSectionProvider>
