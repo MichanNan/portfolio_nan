@@ -27,6 +27,7 @@ const Projects = () => {
       <div ref={ref} className="flex gap-4 flex-wrap justify-center ">
         {projectsData.map((project, index) => (
           <motion.div
+            key={project.title}
             variants={fadeInAnimationVariants}
             whileInView="animate"
             initial="initial"
@@ -35,7 +36,7 @@ const Projects = () => {
             }}
             custom={index}
           >
-            <ProjectItem project={project} key={project.title} />
+            <ProjectItem project={project} />
           </motion.div>
         ))}
       </div>
