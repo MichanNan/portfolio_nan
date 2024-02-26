@@ -20,14 +20,7 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }) => {
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgress,
-        opacity: opacityProgress,
-      }}
-      className="group mb-3 sm:mb-8 last:mb-0"
-    >
+    <motion.div ref={ref} className="group mb-3 sm:mb-8 last:mb-0">
       <section className="flex bg-gray-100  border border-black/5 overflow-hidden hover:bg-gray-200 transition rounded-lg">
         <div className="relative flex flex-col justify-start items-center gap-4 w-[300px] h-[620px] pb-4">
           <Image
