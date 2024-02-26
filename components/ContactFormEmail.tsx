@@ -34,7 +34,7 @@ const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
               </Heading>
               <Text>{message}</Text>
               <Hr />
-              <Text>The sneder's email is:{senderEmail}</Text>
+              <Text>{`The sneder's email is: ${senderEmail}`}</Text>
             </Section>
           </Container>
         </Body>
