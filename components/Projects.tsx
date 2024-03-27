@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 import { useSectionInView } from "@/hooks/useSectionInView";
 
 const Projects = () => {
-  const { ref } = useSectionInView("Projects", 0.5);
+  const { ref } = useSectionInView("Projects", 0.3);
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,

@@ -20,7 +20,7 @@ const Skills = () => {
     }),
   };
 
-  const { ref } = useSectionInView("Skills", 0.5);
+  const { ref } = useSectionInView("Skills", 0.3);
 
   return (
     <section

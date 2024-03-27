@@ -12,7 +12,7 @@ import {
 } from "react-vertical-timeline-component";
 
 const Experience = () => {
-  const { ref, inView } = useSectionInView("Experience", 0.2);
+  const { ref, inView } = useSectionInView("Experience", 0.5);
 
   return (
     <section ref={ref} className="scroll-mt-28" id="experience">
